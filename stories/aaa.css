@@ -1,0 +1,8 @@
+.a {
+  display: block;
+}
+.a .b {
+  background: 'red';
+  border: 'solid 1px red';
+  display: none;
+}

@@ -4,29 +4,23 @@ import { ConfigContext } from '../config-provide';
 import classnames from 'classnames';
 import './waterfall.less';
 
-const dataImages = [
-  "https://picsum.photos/640/200/?random",
-  "https://picsum.photos/360/640/?random",
-  "https://picsum.photos/480/720/?random",
-  "https://picsum.photos/480/640/?random",
-  "https://picsum.photos/360/?random",
-  "https://picsum.photos/360/520/?random",
-  "https://picsum.photos/520/360/?random",
-  "https://picsum.photos/520/360/?random",
-  "https://picsum.photos/520/360/?random",
-]
-
-interface IWaterFallProps {
+export interface IWaterFallProps {
+  /**
+   * 添加额外的classname
+   */
   classname?: string;
+  /**
+   * 添加额外的classname
+   */
   source: string[];
 };
 
 const WaterFall:FC<IWaterFallProps> = (props) => {
-  const {classname , source} = props;
+  const {classname, source=[]} = props;
   const [masonry, setMasonry] = useState<any>();
   const { getPrefixCls } = useContext(ConfigContext);
   const prefixCls = getPrefixCls('waterfall');
-  console.log(prefixCls);
+
   useEffect(() => {
     if (masonry) {
       masonry.reInit();
@@ -47,9 +41,9 @@ const WaterFall:FC<IWaterFallProps> = (props) => {
   return (
     <div className={classnames(prefixCls,classname)}>
       {
-        dataImages && dataImages.map((item: any, index: any) => {
+        source && source.map((item: any, index: any) => {
           return (
-            <img src={item} className="img_item" key={`${prefixCls}-img-index`} />
+            <img src={item} className="img_item" key={`${prefixCls}-img-${index}`} />
           )
         })
       }

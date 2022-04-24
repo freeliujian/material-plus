@@ -14,6 +14,7 @@
     "build:ls": "run-s -n build-css:ls",
     "build-css:ls": "node-less-chokidar stories",
     "watch-css:ls": "node-less-chokidar stories --watch",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "test": "run-s -n build-css test-js"
   },
   "author": "jian.liu",

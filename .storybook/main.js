@@ -9,14 +9,6 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    // {
-    //   "name": "@storybook/mui-plus",
-    //   "options": {
-    //     "craOverrides": {
-    //       "fileLoaderExcludes": ["less"]
-    //     }
-    //   }
-    // }
   ],
   "webpackFinal":  async (config) => {
     config.module.rules.push({

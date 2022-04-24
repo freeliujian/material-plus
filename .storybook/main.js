@@ -19,12 +19,12 @@ module.exports = {
     // }
   ],
   "webpackFinal":  async (config) => {
-    // config.module.rules.push({
-    //   test: /\.less$/,
-    //   use: ["style-loader", "css-loader", "less-loader"],
-    //   include: path.resolve(__dirname, "stories"),
-    //   exclude: [/node_modules/],
-    // });
+    config.module.rules.push({
+      test: /\.less$/,
+      use: ["style-loader", "css-loader", "less-loader"],
+      include: path.resolve(__dirname, "../stories/"),
+      exclude: [/node_modules/],
+    });
     config.module.rules.push({
       test: /\.(ts|tsx)$/,
       loader: require.resolve("babel-loader"),

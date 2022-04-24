@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext,FC } from 'react';
 import Macy from 'macy'
 import { ConfigContext } from '../config-provide';
 import classnames from 'classnames';
@@ -17,11 +17,12 @@ const dataImages = [
 ]
 
 interface IWaterFallProps {
-  classname: string;
+  classname?: string;
   source: string[];
 };
 
-const WaterFall = (props) => {
+const WaterFall:FC<IWaterFallProps> = (props) => {
+  const {classname , source} = props;
   const [masonry, setMasonry] = useState<any>();
   const { getPrefixCls } = useContext(ConfigContext);
   const prefixCls = getPrefixCls('waterfall');
@@ -44,7 +45,7 @@ const WaterFall = (props) => {
   }, []);
 
   return (
-    <div className={classnames(prefixCls)}>
+    <div className={classnames(prefixCls,classname)}>
       {
         dataImages && dataImages.map((item: any, index: any) => {
           return (

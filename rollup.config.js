@@ -41,7 +41,6 @@ const processLess = function(context, payload) {
     );
   });
 };
-
 export default {
   input: 'stories/index.ts',
   output: [

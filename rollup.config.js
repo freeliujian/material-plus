@@ -60,9 +60,6 @@ export default {
     resolve(),
     commonjs({
       sourceMap: !isProd,
-      namedExports: {
-        'node_modules/react-is/index.js': ['isFragment', 'ForwardRef']
-      }
     }),
     json(),
     postcss({

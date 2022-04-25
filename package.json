@@ -6,6 +6,7 @@
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "scripts": {
+    "tsc": "tsc -w",
     "start": "npm-run-all -p start:sb",
     "build": "rimraf build/* && rollup -c",
     "start:sb": "start-storybook -p 6006",

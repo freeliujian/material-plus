@@ -19,16 +19,19 @@
   "author": "jian.liu",
   "license": "ISC",
   "peerDependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   },
   "dependencies": {
-    "@types/react": "^18.0.6",
-    "@types/react-dom": "^18.0.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.2",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "classnames": "^2.3.1",
     "macy": "^2.5.1",
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
     "typescript": "^4.6.3"
   },
   "devDependencies": {

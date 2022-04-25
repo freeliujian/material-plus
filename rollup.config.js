@@ -58,12 +58,18 @@ export default {
   plugins: [
     typescript(),
     resolve(),
-    commonjs({ sourceMap: !isProd }),
+    commonjs({
+      sourceMap: !isProd,
+      namedExports: {
+        'node_modules/react-is/index.js': ['isFragment', 'ForwardRef']
+      }
+    }),
     json(),
     postcss({
       extract: true,
       process: processLess
     }),
     babel(babelOptions),
-  ]
+  ],
+  external: ['react', 'react-dom']
 }

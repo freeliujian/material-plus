@@ -46,11 +46,13 @@ export default {
   output: [
     {
       file: packageJson.main,
-      format: "cjs",
+      format: "umd",
+      name:'test'
     },
     {
       file: packageJson.module,
-      format: "es",
+      format: "umd",
+      name:'test2'
     }
   ],
   plugins: [
@@ -69,5 +71,5 @@ export default {
     }),
     babel(babelOptions),
   ],
-  external: ['react', 'react-dom']
+  external: [ 'react', 'react-is', 'react/jsx-runtime' ],
 }

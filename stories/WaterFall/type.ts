@@ -41,13 +41,13 @@ export interface WaterFallSettingProps {
   /**
    * 允许您指定总列数将如何根据视口的宽度变化
    */
-  breakAt:any
+  breakAt?:any
   /**
    * 是否开启promise
    */
-  cancelLegacy: boolean
+  cancelLegacy?: boolean
   /**
    * 是否开启，断点选项基于容器元素宽度而不是文档宽度
    */
-  useContainerForBreakpoints: boolean
+  useContainerForBreakpoints?: boolean
 }

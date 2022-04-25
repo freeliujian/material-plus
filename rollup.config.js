@@ -47,12 +47,10 @@ export default {
     {
       file: packageJson.main,
       format: "cjs",
-      type:"babel"
     },
     {
       file: packageJson.module,
       format: "es",
-      type:"babel"
     }
   ],
   plugins: [

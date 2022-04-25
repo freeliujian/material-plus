@@ -14,6 +14,7 @@
     "build:ls": "run-s -n build-css:ls",
     "build-css:ls": "node-less-chokidar stories",
     "watch-css:ls": "node-less-chokidar stories --watch",
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx src --color",
     "test": "run-s -n build-css test-js"
   },
   "author": "jian.liu",
@@ -46,6 +47,7 @@
     "babel-loader": "^8.2.5",
     "babel-preset-react-app": "^10.0.1",
     "eslint": "^8.14.0",
+    "glob": "^8.0.1",
     "less": "^4.1.2",
     "less-loader": "^5.0.0",
     "node-less-chokidar": "^0.4.1",

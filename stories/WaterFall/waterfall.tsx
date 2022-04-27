@@ -3,7 +3,7 @@ import Macy from 'macy';
 import { ConfigContext } from '../config-provide';
 import { WaterFallProps } from './type';
 import classnames from 'classnames';
-import './waterfall.less';
+import './WaterFall.less';
 
 
 const WaterFall:FC<WaterFallProps> = (props) => {

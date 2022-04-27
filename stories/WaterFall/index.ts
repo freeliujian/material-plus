@@ -1,1 +1,1 @@
-export {default as WaterFall} from './waterfall';
+export {default as WaterFall} from './WaterFall';

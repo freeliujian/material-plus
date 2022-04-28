@@ -1,22 +1,60 @@
-import React,{useContext} from 'react';
-import {Button} from 'antd';
-import {ConfigContext} from '../config-provide';
+import React, { useContext, FC, ReactNode } from 'react';
+import { ConfigContext } from '../config-provide';
 import classnames from 'classnames';
 import './LeftToRightLogin.less';
 
 export interface LeftToRightLoginProps {
-  background?:string
-  slogan?:string
-  
+  backgroundImg?: string
+  background?: string
+  slogan?: string
+  logo?: string
+  statement: string | ReactNode
 }
 
-const LeftToRightLogin = (props:any) => {
-
-  const {getPrefixCls} = useContext(ConfigContext);
-  const prefixCls = getPrefixCls('login-container');
+const LeftToRightLogin: FC<LeftToRightLoginProps> = (props) => {
+  const {
+    backgroundImg,
+    background,
+    slogan,
+    logo,
+    children,
+    statement
+  } = props;
+  const { getPrefixCls } = useContext(ConfigContext);
+  const prefixCls = getPrefixCls('login-container-root');
+  console.log(backgroundImg, slogan, logo)
   return (
     <div className={classnames(prefixCls)}>
-      <Button type="primary">button</Button>
+
+      <div
+        className='MuiPlus-left-container'
+        style={{
+          backgroundImage: `url(${backgroundImg})`,
+          backgroundSize: "100% 100%",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <img className='MuiPlus-left-slogan' src={slogan} />
+      </div>
+
+      <div className='MuiPlus-right-container' style={{ background: `${background}` }}>
+        <div className='MuiPlus-wrapper'>
+          <div>
+            <div style={{textAlign:'center'}}>
+            {
+              logo && <img className='MuiPlus-logo' src={logo} alt="logo" />
+            }
+            </div>
+            <div className='MuiPlus-form-container'>
+              {children}
+            </div>
+          </div>
+        </div>
+        <div className='MuiPlus-statement'>
+          {statement}
+        </div>
+      </div>
+
     </div>
   );
 }

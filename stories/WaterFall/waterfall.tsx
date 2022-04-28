@@ -8,7 +8,7 @@ import './WaterFall.less';
 
 const WaterFall:FC<WaterFallProps> = (props) => {
   const {
-    classname,
+    className,
     source=[],
     waterFallSetting={
       trueOrder:false,
@@ -35,7 +35,7 @@ const WaterFall:FC<WaterFallProps> = (props) => {
   }, []);
 
   return (
-    <div className={classnames(prefixCls,classname)}>
+    <div className={classnames(prefixCls,className)}>
       {
         source && source.map((item: any, index: any) => {
           return (

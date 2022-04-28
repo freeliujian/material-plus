@@ -31,6 +31,9 @@
     "outDir": "./build",
     "declarationDir": "./build",
   },
+  "files": [
+    "./index.d.ts"
+  ],
   "include": ["stories/**/*"],
   "exclude": [
     "node_modules",

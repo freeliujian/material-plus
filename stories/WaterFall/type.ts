@@ -2,7 +2,7 @@ export interface WaterFallProps {
   /**
    * 添加额外的classname
    */
-  classname?: string;
+  className?: string;
   /**
    * 添加额外的classname
    */

@@ -22,7 +22,6 @@ const LeftToRightLogin: FC<LeftToRightLoginProps> = (props) => {
   } = props;
   const { getPrefixCls } = useContext(ConfigContext);
   const prefixCls = getPrefixCls('login-container-root');
-  console.log(backgroundImg, slogan, logo)
   return (
     <div className={classnames(prefixCls)}>
 
